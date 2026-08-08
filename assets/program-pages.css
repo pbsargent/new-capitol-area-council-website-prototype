@@ -123,6 +123,46 @@ header {
     linear-gradient(135deg, var(--navy), var(--accent));
 }
 
+.photo-outdoor .hero {
+  background:
+    linear-gradient(90deg, rgba(5, 31, 76, .96), rgba(5, 31, 76, .82) 52%, rgba(5, 31, 76, .48)),
+    url("photo-outdoor-overnight.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.photo-summer .hero {
+  background:
+    linear-gradient(90deg, rgba(5, 31, 76, .96), rgba(5, 31, 76, .8) 52%, rgba(5, 31, 76, .45)),
+    url("photo-summer-camp.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.photo-speedfest .hero {
+  background:
+    linear-gradient(90deg, rgba(5, 31, 76, .96), rgba(5, 31, 76, .78) 52%, rgba(5, 31, 76, .42)),
+    url("photo-speedfest.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.photo-steam .hero {
+  background:
+    linear-gradient(90deg, rgba(5, 31, 76, .96), rgba(5, 31, 76, .78) 52%, rgba(5, 31, 76, .44)),
+    url("photo-steam-day-camp.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.photo-service .hero {
+  background:
+    linear-gradient(90deg, rgba(5, 31, 76, .96), rgba(5, 31, 76, .78) 52%, rgba(5, 31, 76, .44)),
+    url("photo-service.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 .hero::before {
   content: "";
   position: absolute;
