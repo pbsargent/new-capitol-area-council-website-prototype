@@ -143,21 +143,19 @@
       opacity: .32;
     }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      right: max(32px, calc((100vw - 1180px) / 2));
-      bottom: 70px;
-      width: min(43vw, 510px);
+    .hero-photo {
+      width: min(100%, 510px);
       aspect-ratio: 1.18 / 1;
+      justify-self: end;
+      align-self: center;
       border-radius: 8px;
       background:
         linear-gradient(135deg, rgba(5, 31, 76, .12), rgba(44, 127, 248, .24)),
         url("assets/photo-outdoor-overnight.jpg");
       background-size: cover;
-      background-position: center;
+      background-position: center 34%;
       box-shadow: var(--shadow);
-      opacity: .95;
+      border: 1px solid rgba(255, 255, 255, .22);
     }
 
     .hero-inner {
@@ -168,7 +166,7 @@
       margin: 0 auto;
       display: grid;
       align-items: center;
-      grid-template-columns: minmax(0, 620px) 1fr;
+      grid-template-columns: minmax(0, 620px) minmax(320px, 1fr);
       gap: 40px;
       padding: 72px 0 98px;
     }
@@ -473,8 +471,14 @@
 
     @media (max-width: 980px) {
       .nav-links a:not(.button) { display: none; }
-      .hero::after { opacity: .24; width: 72vw; }
       .hero-inner { grid-template-columns: 1fr; }
+      .hero-photo {
+        width: 100%;
+        max-width: none;
+        aspect-ratio: 16 / 9;
+        justify-self: stretch;
+        background-position: center 32%;
+      }
       .program-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .event-grid, .split { grid-template-columns: 1fr; }
     }
@@ -486,6 +490,7 @@
       .logo { width: 210px; }
       .hero, .hero-inner { min-height: auto; }
       .hero-inner { padding: 54px 0 64px; }
+      .hero-photo { aspect-ratio: 4 / 3; }
       .hero-tiles, .program-grid, .resource-grid { grid-template-columns: 1fr; }
       .section-heading, .help-inner, .footer-inner { align-items: start; flex-direction: column; }
       section { padding: 56px 0; }
@@ -537,6 +542,7 @@
             <a class="hero-tile" href="camping-events.html"><strong>Events</strong><span>Day camps, campouts, training, service, and council activities.</span></a>
           </div>
         </div>
+        <div class="hero-photo" role="img" aria-label="A young Scout looking up during an outdoor climbing adventure"></div>
       </div>
     </section>
 
